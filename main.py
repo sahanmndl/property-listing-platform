@@ -129,14 +129,12 @@ class PropertyCreate(BaseModel):
     amenities: List[str]
 
 
-# Create Property API
 @app.post("/api/v1/properties")
 async def create_property(property_data: PropertyCreate, user_id: str):
     property_id = manager.add_property(user_id, property_data.dict())
     return {"property_id": property_id}
 
 
-# Search Properties API
 @app.get("/api/v1/properties/search")
 async def search_properties(
         min_price: float = None,
