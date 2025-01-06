@@ -1,8 +1,9 @@
-from datetime import datetime
-from typing import List, Dict, Optional
-from fastapi import FastAPI, HTTPException, Depends
-from pydantic import BaseModel, Field
 import uuid
+from datetime import datetime
+from typing import List, Dict
+
+from fastapi import FastAPI
+from pydantic import BaseModel
 
 
 # Part 1: Data Models and Structures
